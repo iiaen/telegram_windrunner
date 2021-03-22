@@ -1,1 +1,4 @@
 credentials.py
+personalstuff.py
+*.png
+logs.txt
