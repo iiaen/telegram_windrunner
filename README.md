@@ -5,4 +5,4 @@ Using this to automate collecting and sending the following info to myself via T
 - Insider purchases (info from SEC Form 4 filings)
 - Price and volume metrics for a list of tickers, data from Yahoo Finance  
   
-> Just for fun only! 🥧
+> 🥧 Just for fun only! 
