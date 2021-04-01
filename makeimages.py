@@ -9,7 +9,7 @@ def save_df_as_image(df, path):
     for column in df_columns:
         columns_for_table.append(TableColumn(field=column, title=column))
     
-    height=30*len(df)
+    height=30*len(df) + 5
     data_table = DataTable(source=source, columns=columns_for_table, 
                            autosize_mode="fit_columns", height=height,
                            index_position=None)

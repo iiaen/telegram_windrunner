@@ -16,4 +16,8 @@ if weekno > 0 and weekno < 6:
     # send tables
     client.send_file(username, 'openinsider.png', caption="Insider Purchases") 
     client.send_file(username, 'portfolio.png', caption="Yahoo Finance") 
+    client.send_file(username, 'MSFT.png', caption="MSFT Intraday") 
     # client.send_message(username, 'Send message to @<bot> without signing in with OTP') 
+
+
+Print('shish kebab')

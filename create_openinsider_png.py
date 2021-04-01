@@ -14,7 +14,7 @@ df.columns = df.columns.str.replace(r"\xa0", " ")
 
 
 # Clean up
-df1 = df.drop(["X", "Trade Type", "Insider Name", "Qty", "Owned", '1d', '1w', '1m', '6m'], axis=1)
+df1 = df.drop(["X", "Filing Date", "Trade Date", "Trade Type", "Insider Name", "Qty", "Owned", '1d', '1w', '1m', '6m'], axis=1)
 df1['Filing Date'] = df['Filing Date'].str[:10]
 # df1['Filing\xa0Date'] = pd.to_datetime(df1['Filing\xa0Date']).dt.date
 # df1['Sector'] = df1.apply(lambda x: (yf.Ticker(x.Ticker).info['sector']), axis=1)
@@ -27,13 +27,13 @@ df1["AvgVol10D"] = ""
 for index, row in df1.iterrows():
     info = yf.Ticker(row.Ticker).info
     row["Sector"] = info['sector']
-    row["BookValue"] = info['bookValue']
+    # row["BookValue"] = info['bookValue']
     row["AvgVol10D"] = info['averageDailyVolume10Day']
 
 # Clean up columns
-df1 = df1[['Filing Date', 'Trade Date', 'Ticker', 'Company Name', 'Sector', 'Title', 'Price', 
-           'ΔOwn', 'Value', 'BookValue', 'AvgVol10D']]
-df1.rename(columns = {'Value':'InsiderTradeVal'}, inplace = True) 
+df1 = df1[['Ticker', 'Company Name', 'Sector', 'Title', 'Price', 
+           'ΔOwn', 'Value', 'AvgVol10D']]
+df1.rename(columns = {'Value':'InsTradeVal'}, inplace = True) 
 
 
 save_df_as_image(df1, "openinsider.png")
