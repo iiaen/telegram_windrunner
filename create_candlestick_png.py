@@ -44,4 +44,4 @@ intraday_df = yf.download(  # or pdr.get_data_yahoo(...
 
 kwargs = dict(type='candle',volume=True)
 s  = mpf.make_mpf_style(base_mpf_style='yahoo', gridstyle='')
-mpf.plot(intraday_df,**kwargs,style=s,savefig='candlestick.png')
+mpf.plot(intraday_df,**kwargs,style=s,savefig='candlestick.png',tight_layout=True)
