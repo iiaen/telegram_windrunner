@@ -6,3 +6,6 @@ Using this to automate collecting and sending the following info to myself via T
 - Price and volume metrics for a list of tickers, data from Yahoo Finance  
   
 > 🥧 Just for fun only! 
+
+<p>&nbsp;</p>
+![Alt text](https://raw.githubusercontent.com/iiaen/telegram_windrunner/master/Sample.png "Mockup")  
